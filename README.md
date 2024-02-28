@@ -23,7 +23,7 @@ One time only:
 
 ```
 python3 -m venv venv
-./venv/bin/pip install requirements.txt
+./venv/bin/pip install -r requirements.txt
 ```
 
 ## run it
