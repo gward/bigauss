@@ -25,6 +25,9 @@ def main():
     for (idx, samples) in enumerate(distros):
         summary = str(samples[:5])[1:-1] + ', ..., ' + str(samples[-3:])[1:-1]
         print(f'set {idx+1}: {summary}')
+
+        # Could not have written this without
+        # https://stackoverflow.com/questions/51318981/how-to-use-python-to-separate-two-gaussian-curves
         samples = numpy.array(samples)
         mxt = mixture.GaussianMixture(n_components=2).fit(samples.reshape(-1, 1))
         means_hat = mxt.means_.flatten()
